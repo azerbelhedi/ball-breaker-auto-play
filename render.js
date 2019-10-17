@@ -1,22 +1,22 @@
 //alert("a") ;
 let canvas = document.querySelector("#myCanvas") ;
 let ctx = canvas.getContext("2d") ;
-let autoPlay = false
+let autoPlay = true
 
 const switchAutoPlay = () => {
     autoPlay = !autoPlay
 }
 
 //ball : 
-let y = canvas.height / 2  ;
+let y = canvas.height / 2   +50 ;
 let x = (canvas.width / 2 ) - 20 ;
-let ballRadius = 10 ;
-let dx = -1.5 ;
-let dy = -2.4 ;
+let ballRadius = 2.5 ;
+let dx = -3 ; // original set to -1.5
+let dy = -5 ; // original set to -2.4
 let live = 10 ;
 //paddle
-let paddleHeight = 10 ;
-let paddleWidh = 100 ;
+let paddleHeight = 2 ;
+let paddleWidh = 40 ;
 let paddleX = (canvas.width - paddleWidh )/2 ;
 
 //keyboard :
@@ -24,10 +24,10 @@ let rightPressed = false ;
 let leftPressed = false ;
 
 // bricks :
-let brickRowCount = 5 ;
-let brickColumnCount = 24 ;
-let brickWidh = 20 ;
-let brickHeight = 20 ;
+let brickRowCount = 40 ;
+let brickColumnCount = 96 ;
+let brickWidh = 5 ;
+let brickHeight = 5 ;
 let brickPadding = 0 ;
 let brickOffsetTop = 0 ;
 let brickOffsetleft = 00 ;
@@ -106,7 +106,7 @@ const keyUpHandler = (e) => {
 
 const drawPaddle = () => {
     ctx.beginPath() ;
-    ctx.rect(paddleX , canvas.height - 10 , paddleWidh , paddleHeight) ;
+    ctx.rect(paddleX , canvas.height - 5 , paddleWidh , paddleHeight) ;
     ctx.fillStyle = "blue" ;
     ctx.fill() ;
     ctx.closePath() ;
@@ -186,7 +186,7 @@ const draw = () => {
     aiHelp()
 }
 
-var interval = setInterval(draw , 10) ; // original frame = 10
+var interval = setInterval(draw , 1) ; // original frame = 10
 
 document.addEventListener("keydown" , keyDownHandler , false ) ; // why false parameter ?? 
 document.addEventListener("keyup" , keyUpHandler , false ) ;
