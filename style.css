@@ -1,0 +1,18 @@
+
+
+canvas { 
+    background: #eee; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+button{
+    margin : 15px ;
+    width :200px ;
+    background-color: rgb(75, 133, 219);
+    border: none;
+    font-weight: bolder;
+    box-shadow: 1px 1px 5px black;
+    height :50px;
+    font-size: 25px;
+}
