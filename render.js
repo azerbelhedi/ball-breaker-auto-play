@@ -11,8 +11,8 @@ const switchAutoPlay = () => {
 let y = canvas.height / 2   +50 ;
 let x = (canvas.width / 2 ) - 20 ;
 let ballRadius = 2.5 ;
-let dx = -3 ; // original set to -1.5
-let dy = -5 ; // original set to -2.4
+let dx = -1.5 ; // original set to -1.5
+let dy = -2.4 ; // original set to -2.4
 let live = 10 ;
 //paddle
 let paddleHeight = 2 ;
